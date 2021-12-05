@@ -24,5 +24,5 @@ Disclaimer: I didn't update anycode on this project since months! I am sure some
 
 ![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot1.png)
 ![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot2.png)
-![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot3.png)
+![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot3.jpg)
 
