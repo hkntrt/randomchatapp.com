@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    background-color: #f7fbff;
+}
+
+.navbar {
+    background-color: #4c7ea9;
+}
+
+.navbar-item {
+    color: whitesmoke;
+}
+
+.title {
+    color: #93105e;
+}
+
+.navbar-menu {
+    background-color: #4c7ea9;
+}
+
+@media only screen and (max-width: 768px) {
+    .boxes {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-one {
+        order: 2;
+    }
+    .box-two {
+        order: 1;
+    }
+    .box-three {
+        order: 3;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159849158-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159849158-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>{{"randomchatapp.com"}}</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        html,
+        body {
+            background: linear-gradient(90deg, rgba(167, 69, 107, 1) 0%, rgba(220, 93, 103, 1) 100%);
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-item {
+            color: whitesmoke;
+        }
+
+        .title {
+            color: white;
+        }
+
+        .navbar-menu {
+            background-color: transparent;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="57x57" href={{ url_for("static", filename="favicon/apple-icon-57x57.png") }}>
+    <link rel="apple-touch-icon" sizes="60x60" href={{ url_for("static", filename="favicon/apple-icon-60x60.png") }}>
+    <link rel="apple-touch-icon" sizes="72x72" href={{ url_for("static", filename="favicon/apple-icon-72x72.png") }}>
+    <link rel="apple-touch-icon" sizes="76x76" href={{ url_for("static", filename="favicon/apple-icon-76x76.png") }}>
+    <link rel="apple-touch-icon" sizes="114x114"
+        href={{ url_for("static", filename="favicon/apple-icon-114x114.png") }}>
+    <link rel="apple-touch-icon" sizes="120x120
+        href={{ url_for("static", filename="favicon/apple-icon-120x120.png") }}>
+    <link rel=" apple-touch-icon" sizes="144x144"
+        href={{ url_for("static", filename="favicon/apple-icon-144x144.png") }}>
+    <link rel="apple-touch-icon" sizes="152x152"
+        href={{ url_for("static", filename="favicon/apple-icon-152x152.png") }}>
+    <link rel="apple-touch-icon" sizes="180x180"
+        href={{ url_for("static", filename="favicon/apple-icon-180x180.png") }}>
+    <link rel="icon" type="image/png" sizes="192x192"
+        href={{ url_for("static", filename="favicon/android-icon-192x192.png") }}>
+    <link rel="icon" type="image/png" sizes="32x32" href={{ url_for("static", filename="favicon/favicon-32x32.png") }}>
+    <link rel="icon" type="image/png" sizes="96x96" href={{ url_for("static", filename="favicon/favicon-96x96.png") }}>
+    <link rel="icon" type="image/png" sizes="16x16" href={{ url_for("static", filename="favicon/favicon-16x16.png") }}>
+    <link rel="manifest" href={{ url_for("static", filename="favicon/manifest.json") }}>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content={{ url_for("static", filename="favicon/ms-icon-144x144.png") }}>
+    <meta name="theme-color" content="#ffffff">
+    {% block extra_css %} {% endblock extra_css %}
+    {% block meta_tag %} {% endblock meta_tag %}
+    {% block extra_script %} {% endblock extra_script %}
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/home">
+                <img src="{{ url_for('static', filename='img/newlogo.png') }}" alt="website logo" height="200rem">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span style="color: whitesmoke;" aria-hidden="true"></span>
+                <span style="color: whitesmoke;" aria-hidden="true"></span>
+                <span style="color: whitesmoke;" aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                <a href="/home" class="navbar-item">
+                    Home
+                </a>
+                <a href="/chatpage" class="navbar-item">
+                    Chat
+                </a>
+                <a href="/blog" class="navbar-item">
+                    Blog
+                </a>
+                <a href="/contact" class="navbar-item">
+                    Contact
+                </a>
+                <a href="/about" class="navbar-item">
+                    About
+                </a>
+            </div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });</script>
+
+    <script>
+        let arr = document.cookie.split(";")
+        if (!arr.includes("gdprConsent=1")) {
+            let context = `<div id="gdpr" class="has-text-centered" style="
+    background-color:white;
+    position:fixed;
+    bottom:0.5em;width:100vw;
+    justify-content:center"><p style="display:inline-block;padding-top:0.3em;padding-right:0.3em"> We use cookies to deliver best service. </p>  <button onclick=permitConsent() class="button is-info is-small" style="display:inline;margin-top:0.2em;margin-bottom:0.2em">Accept</button></div>`
+            let gdprDiv = document.createElement("div")
+            gdprDiv.innerHTML = context
+            document.body.appendChild(gdprDiv)
+        }
+        function permitConsent() {
+            let d = new Date();
+            d.setTime(d.getTime() + (360 * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = "gdprConsent=1; expires=" + expires + ";path=/"
+            let div = document.getElementById("gdpr")
+            div.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

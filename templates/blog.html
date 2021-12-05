@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+<meta name="description" content="Randomchatapp blog page. Get the latest updates and articles about randomchatapp.">
+
+{% block content %}
+
+<div
+    style="background-color: rgb(255, 255, 255, .7); min-height: 88vh; margin: 1.2em; border-radius: 2em; box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.1);">
+    <div class="columns has-text-centered">
+        <div style="color: black;" class="column is-7">
+            <h1 style="color: black;" class="title">How to use?</h1>
+            <p style="padding-left: 1em; padding-right: 1em;"> Chatting is a pretty straight forward thing but we have a
+                few extra special features that are worth
+                to
+                mention.
+                Here is how the chat page looks like. You can send text, picture and voice messages.
+
+                <br>
+                <br>
+                To send picture and voice messages one shall request permission first. If your companion accepts the
+                request you will be granted with the ability to share picture and voice messages. Picture messages
+                are
+                restricted to 5 megabytes and voice messages are restricted to 10 seconds of record. You can stop
+                the
+                record before 10 second is up and then click to the adjacent send button to send.
+                <br>
+                <br>
+                Once you accept the
+                request you will be prompted with the microphone access dialog. This permission is required in order to
+                record your voice. We do not record anything unless you click to the record button. Voice recording will
+                probably work with your smart devices out of the box but you may need to check your operating system's
+                settings if you are using a standard pc or a laptop. Vast majority of laptops have built-in microphones.
+            </p>
+        </div>
+        <div class="column is-5">
+            <br>
+            <br>
+            <img style="box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.5);max-height: 30em;"
+                src="{{url_for('static', filename='img/chatshot.jpg')}}" alt="screenshot of the chat page">
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

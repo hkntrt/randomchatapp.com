@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #f7fbff;
+}
+
+.title {
+    color: #93105e;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: var(--nh);
+    width: 70vw;
+    padding: 0.5em;
+}
+
+.messagebox {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    overflow-y: scroll;
+}
+
+.formcontrols {
+    justify-items: flex-end;
+}
+
+.messagecard {
+    display: flex;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.5);
+    align-self: flex-end;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-left: 1em;
+    border-radius: 0.7em;
+    overflow-wrap: break-word;
+}
+
+.messagecard .message-sender {
+    font-weight: bold;
+    font-size: 0.885em;
+}
+
+.messagecard .message-time {
+    font-weight: bold;
+    font-size: 0.775em;
+}
+
+.messagecard .message-context p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    padding-right: 1em;
+}
+
+.messagecard .message-context img {
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.messagecard audio {
+    width: 15em;
+}
+
+.messagecard .usericon {
+    padding: 0.3em;
+    min-width: 3em;
+    max-width: 3em;
+    padding-bottom: 0.1em;
+}
+
+.messagecard-icon {
+    margin-top: 0.1em;
+    align-self: center;
+}
+
+.message-info {
+    padding-top: 0.1em;
+    padding-right: 0.5em;
+}
+
+.message-stranger {
+    align-self: flex-start;
+    background-color: #faeaec;
+}
+
+.message-me {
+    align-self: flex-end;
+    background-color: #fafaea;
+}
+
+.system-notification {
+    background-color: #effaf3;
+    color: #257942;
+    display: flex;
+    align-self: center;
+    width: fit-content;
+    flex-basis: content;
+    padding: 0.5em;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+}
+
+.controlsDiv {
+    display: none;
+    position: absolute;
+    bottom: 3.5em;
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.5);
+    padding: 1em 1em 1em 1em;
+    border-radius: 1em;
+    background-color: white;
+}
+
+.mediaBtns {
+    display: none;
+}
+
+.button img {
+    height: 1.3em;
+}
+
+.controlsDiv button {
+    border-radius: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    .chatbox {
+        width: 100vw;
+    }
+}

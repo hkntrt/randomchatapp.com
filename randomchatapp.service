@@ -1,0 +1,14 @@
+[Unit]
+Description=Start serving randomchatapp.com
+Requires=nginx.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=hexdumplabs
+RemainAfterExit=yes
+ExecStart=/bin/sh /home/hexdumplabs/randomchatapp.com/run.sh
+
+[Install]
+WantedBy=multi-user.target

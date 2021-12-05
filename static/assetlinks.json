@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.randomchatapp.randomchatapp",
+               "sha256_cert_fingerprints": ["Alias name: hexdumplabs Creation date: Mar 9, 2020 Entry type: PrivateKeyEntry Certificate chain length: 1 Certificate[1]: Owner: CN=hexdumplabs Issuer: CN=hexdumplabs Serial number: 4b00e77a Valid from: Mon Mar 09 21:51:40 EET 2020 until: Fri Mar 03 21:51:40 EET 2045 Certificate fingerprints: 	 SHA1: 1F:DD:D2:F6:B8:8B:A8:D5:31:71:6E:55:26:22:CC:1D:14:9E:DF:27 	 SHA256: 95:7B:58:0D:75:D0:0E:07:6A:62:9F:DD:4E:6C:3E:6C:A6:DA:83:70:59:44:28:68:6D:AD:1D:CC:30:6C:A4:49 Signature algorithm name: SHA256withRSA Subject Public Key Algorithm: 2048-bit RSA key Version: 3"] }
+}]

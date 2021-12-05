@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+<style>
+  body {
+    background: whitesmoke;
+  }
+
+  .navbar {
+    background: linear-gradient(90deg, rgba(167, 69, 107, 1) 0%, rgba(220, 93, 103, 1) 100%);
+  }
+</style>
+{% endblock extra_css %}
+
+{% block meta_tag %}
+<meta name="description"
+  content="Randomchatapp chat page. Talk with strangers for free and anonymously without registration.">
+{% endblock meta_tag %}
+
+{% block content %}
+<div id="chatbox" class="chatbox">
+
+  <div class="messagebox">
+    <div style="height: 100%;"></div>
+
+
+  </div>
+
+
+  <div class="formcontrols field is-grouped">
+    <p class="control">
+      <button id="optBtn" disabled name="options button" class="button is-info">
+        <img src="{{ url_for('static', filename='img/options.png') }}" alt="" srcset="">
+      </button>
+    </p>
+    <div class="controlsDiv"></div>
+
+
+
+    <p class="control is-expanded">
+      <input id="textInput" disabled class="input" type="text" placeholder="Type your message here" autocomplete="off"
+        autofocus>
+    </p>
+    <p class="control">
+      <button id="sendMsgBtn" name="send button" disabled class="button is-info">SEND</button>
+    </p>
+  </div>
+</div>
+<script>
+  window.onbeforeunload = function () {
+    return "Do you wish to end the chat?"
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+  integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='scripts/chat.js') }}"></script>
+
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block meta_tag %}
+<meta name="description"
+    content="Randomchatapp is a place you can chat for free, without registration and anonymously by sending text, picture and voice messages.">
+{% endblock meta_tag %}
+
+{% block content %}
+
+
+<div style="padding-top:1em;" class="columns is-centered">
+    <div class="column is-three-quarters">
+        <h1 class="title has-text-centered">Welcome to Randomchatapp</h1>
+        <p class="has-text-centered"><a href="/chatpage"
+                style="color: rgb(167, 69, 107); border-radius: 10em; width: 4em; height: 4em; font-size: 1.1em; box-shadow: 0 0 3pt 2pt white;"
+                class="button" href="#"> <b>Chat <br> now</b></a>
+        </p>
+        <p style="color: white; margin-top: 1em; padding-left: 1em; padding-right: 1em;">
+
+            Randomcatapp is a free service that you can use to find and connect with new people. It is made to be fun
+            and entertaining. You'll get to chat with anyone from any country completely random! We don't spy on you and
+            we use powerful encryption to make it even safer. It is not only text messages. You can send and receive
+            picture and voice messages as well if your companion agrees on that too. We believe being able send voice
+            messages will enhance your chatting experience immensely. Click on the chat now button to have some fun or
+            have a look at our <a href="/blog">blog</a> to learn more about
+            the service.
+            We do not associate any information that you entered with you. They all are anonoymous. Have a look at our
+            <a href="/privacy">privacy</a> page.
+        </p>
+        <div style="justify-content: space-evenly; margin-top: 1em;" class="columns is-multiline is-mobile is-centered">
+            <div style="border: 0.1em white solid; border-radius: 5em; margin-bottom: 1em; color: white; font-size: 0.8em;"
+                class="column is-narrow"> Free Chat
+            </div>
+            <div style="border: 0.1em white solid; border-radius: 5em; margin-bottom: 1em; color: white;font-size: 0.8em;"
+                class="column is-narrow">
+                Anonymous
+            </div>
+            <div style="border: 0.1em white solid; border-radius: 5em; margin-bottom: 1em; color: white;font-size: 0.8em;"
+                class="column is-narrow"> No
+                registration </div>
+            <div style="border: 0.1em white solid; border-radius: 5em; margin-bottom: 1em; color: white;font-size: 0.8em;"
+                class="column is-narrow"> Share
+                Pictures </div>
+            <div style="border: 0.1em white solid; border-radius: 5em; margin-bottom: 1em; color: white;font-size: 0.8em;"
+                class="column is-narrow"> Share
+                Sound </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    window.addEventListener('load', () => {
+        registerSW();
+    });
+    async function registerSW() {
+        if ('serviceWorker' in navigator) {
+            try {
+                await navigator.serviceWorker.register("/service-worker.js");
+            } catch (e) {
+                console.log(`SW registration failed`);
+            }
+        }
+    }
+</script>
+{% endblock content %}

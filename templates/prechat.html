@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block meta_tag %}
+<meta name="description" content="Randomchatapp chat rules page. ">
+{% endblock meta_tag %}
+
+{% block content %}
+
+<div style="padding-top:1em;" class="columns is-centered">
+    <div class="column"></div>
+    <div class="column is-three-quarters">
+        <h3 class="title has-text-centered">Chatting Rules</h3>
+        <p style="padding: 0.5em; color: white;" class="subtitle"> Are you ready to find a best friend, your next
+            date or have a casual talk with a stranger? Connecting with anyone from any country is possible
+            therefore the possibilities are endless.
+            We shuffle all users and match them randomly. It is completely anonymous. There are rules you need to follow
+            in order to make a good chat. We have listed them below. We strongly advice you to apply those rules when
+            chatting.</p>
+        <ul style="padding: 0.5em; color: white;" class="content">
+            <li>No scamming (money / visa etc.)</li>
+            <li>No discrimination against other people's race, gender, religion etc.</li>
+            <li>Be respectful</li>
+            <li>No illegal activity</li>
+        </ul>
+        <p class="has-text-centered"><a style="background-color: white; color: rgb(167, 69, 107);" class="button"
+                href="/chat">Proceed to chat</a></p>
+
+
+    </div>
+    <div class="column"></div>
+</div>
+
+{% endblock content %}
