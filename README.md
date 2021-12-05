@@ -22,7 +22,7 @@ Disclaimer: I didn't update anycode on this project since months! I am sure some
 
 ##### Screenshots
 
-![alt text](https://github.com/hkntrt/randomchatapp.com/blob/master/screenshots/screenshot1.png)
-![alt text](https://github.com/hkntrt/randomchatapp.com/blob/master/screenshots/screenshot2.png)
-![alt text](https://github.com/hkntrt/randomchatapp.com/blob/master/screenshots/screenshot3.jpg)
+![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot1.png)
+![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot2.png)
+![alt text](https://github.com/hkntrt/randomchatapp.com/blob/main/screenshots/screenshot3.png)
 
